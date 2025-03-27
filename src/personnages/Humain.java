@@ -26,7 +26,7 @@ public class Humain {
 		return argent;
 	}
 	
-	private void parler(String texte){
+	protected void parler(String texte){
 		System.out.println(texte);
 	}
 	
@@ -41,13 +41,13 @@ public class Humain {
 				" ! GLOUPS !");
 	}
 	
-	private int gagnerArgent(int gain) {
+	protected int gagnerArgent(int gain) {
 		this.argent += gain;
 		
 		return this.argent;
 	}
 	
-	private int perdreArgent(int perte) {
+	protected int perdreArgent(int perte) {
 		this.argent -= perte;
 		
 		return this.argent;
