@@ -10,7 +10,7 @@ public class HistoireTP4 {
 	public static void main(String[] args) {
 		Humain prof = new Humain("Prof", "kombucha", 54);
 		Commercant marchand = new Commercant("Marco", "th�", 20);
-		Yakuza yaku = new Yakuza("Yaku", "biere", 30);
+		Yakuza yakuLeNoir = new Yakuza("Yaku Le Noir", "biere", 30);
 		Ronin roro = new Ronin("Roro","shochu",60);
 		
 		prof.direBonjour();
@@ -26,12 +26,15 @@ public class HistoireTP4 {
 		marchand.boire();
 		
 		System.out.println();
-		yaku.direBonjour();
-		yaku.extorquer(marchand);
+		yakuLeNoir.direBonjour();
+		yakuLeNoir.extorquer(marchand);
 		
 		System.out.println();
 		roro.direBonjour();
 		roro.donner(marchand);
+		
+		System.out.println();
+		roro.provoquer(yakuLeNoir);
 		
 	}
 }
