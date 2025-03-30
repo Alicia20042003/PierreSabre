@@ -13,5 +13,6 @@ public class Ronin extends Humain{
 		int sommeDix = Math.round((getArgent())/10);
 		
 		beneficiaire.gagnerArgent(sommeDix);
+		beneficiaire.recevoir(sommeDix);
 	}
 }
