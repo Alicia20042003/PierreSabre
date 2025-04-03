@@ -9,5 +9,11 @@ public class Traitre extends Samourai {
 		this.niveauTraitrise = 0;
 	}
 	
+	@Override
+	public void direBonjour() {
+		parler("Bonjour ! Je m'appelle " + getNom() +
+				" et j'aime boire du " + getBoissonPreferer() + ".");
+		parler("Je suis fier de servir le seigneur " + getSeigneur() + ".");
+	}
 
 }
