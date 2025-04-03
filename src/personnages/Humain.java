@@ -35,7 +35,7 @@ public class Humain {
 	
 	public void direBonjour() {
 		parler("Bonjour ! Je m'appelle " + getNom() +
-				" et j'aime boire du " + getBoissonPreferer());
+				" et j'aime boire du " + getBoissonPreferer() + ".");
 		//String.format("Je m'appelle %s, j'ai %d ans", nom, age);
 	}
 	
