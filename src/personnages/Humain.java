@@ -4,13 +4,16 @@ public class Humain {
 	private String nom;
 	private String boissonPreferer;
 	private int argent;
-	
+	protected int nbConnaissance;
+	private int nbMaxConnaissance = 30;
+	protected Humain memoire[] = new Humain[nbMaxConnaissance];
 	
 	
 	public Humain(String nom, String boissonPreferer, int argent) {
 		this.nom = nom;
 		this.boissonPreferer = boissonPreferer;
 		this.argent = argent;
+		this.nbConnaissance = 0;
 	}
 
 	//Les accesseurs en lecture
@@ -64,6 +67,45 @@ public class Humain {
 					" sous en poche. Je vais pouvoir m'offrir un " + bien +
 					" à " + prix + " sous.");
 			perdreArgent(prix);
+		}
+		
+	}
+	
+	private void memoriser(Humain humain) {
+		if(nbConnaissance != nbMaxConnaissance) {
+			memoire[nbConnaissance] = humain;
+			nbConnaissance++;
+		}
+	}
+	
+	private void repondre(Humain humain){
+		direBonjour();
+		memoriser(humain);
+	}
+			
+	public void faireConnaissanceAvec(Humain autreHumain) {
+		direBonjour();
+		autreHumain.repondre(this);
+		memoriser(autreHumain);		
+	}
+	
+	public void listerConnaissance() {
+		String connaissance = "";
+		if(nbConnaissance == 0) {
+			parler("Je ne connais personne...");
+		}
+		else {
+			for (int i = 0; i < nbConnaissance; i++) {
+				if(connaissance.equals("")) {
+					connaissance = memoire[i].getNom();
+				}
+				else {
+					connaissance += ", " + memoire[i].getNom();
+				}
+			}
+			
+			parler("Je connais beaucoup de monde dont : "
+					+ connaissance);
 		}
 		
 	}

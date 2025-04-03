@@ -9,8 +9,10 @@ public class HistoireTP4 {
 	
 	public static void main(String[] args) {
 		Humain prof = new Humain("Prof", "kombucha", 54);
-		Commercant marchand = new Commercant("Marco", "th�", 20);
-		Yakuza yakuLeNoir = new Yakuza("Yaku Le Noir", "biere", 30);
+		Commercant marco = new Commercant("Marco", "The", 20);
+		Commercant chonin = new Commercant("Chonin", "The", 40);
+		Commercant kumi = new Commercant("Kumi", "The", 10);
+		Yakuza yakuLeNoir = new Yakuza("Yaku Le Noir", "Whisky", 30, "Warsong");
 		Ronin roro = new Ronin("Roro","shochu",60);
 		
 		prof.direBonjour();
@@ -20,21 +22,29 @@ public class HistoireTP4 {
 		prof.acheter("kimono", 50);
 		
 		System.out.println();
-		marchand.direBonjour();
-		marchand.seFaireExtorquer();
-		marchand.recevoir(15);
-		marchand.boire();
+		marco.direBonjour();
+		marco.seFaireExtorquer();
+		marco.recevoir(15);
+		marco.boire();
 		
 		System.out.println();
 		yakuLeNoir.direBonjour();
-		yakuLeNoir.extorquer(marchand);
+		yakuLeNoir.extorquer(marco);
 		
 		System.out.println();
 		roro.direBonjour();
-		roro.donner(marchand);
+		roro.donner(marco);
 		
 		System.out.println();
 		roro.provoquer(yakuLeNoir);
 		
+		System.out.println();
+		marco.faireConnaissanceAvec(roro);
+		marco.faireConnaissanceAvec(yakuLeNoir);
+		marco.faireConnaissanceAvec(chonin);
+		marco.faireConnaissanceAvec(kumi);
+		marco.listerConnaissance();
+		roro.listerConnaissance();
+		yakuLeNoir.listerConnaissance();
 	}
 }
