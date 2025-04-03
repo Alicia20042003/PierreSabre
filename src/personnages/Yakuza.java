@@ -21,6 +21,12 @@ public class Yakuza extends Humain{
 	public void setReputation(int reputation) {
 		this.reputation = reputation;
 	}
+	
+	public void direBonjour() {
+		parler("Bonjour ! Je m'appelle " + getNom() +
+				" et j'aime boire du " + getBoissonPreferer());
+		parler("Mon clan est celui de " + getClan() + ".");
+	}
 
 	public void extorquer(Commercant victime) {
 		parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par l� ?");

@@ -40,9 +40,17 @@ public class HistoireTP4 {
 		
 		System.out.println();
 		marco.faireConnaissanceAvec(roro);
+		
+		System.out.println();
 		marco.faireConnaissanceAvec(yakuLeNoir);
+		
+		System.out.println();
 		marco.faireConnaissanceAvec(chonin);
+		
+		System.out.println();
 		marco.faireConnaissanceAvec(kumi);
+		
+		System.out.println();
 		marco.listerConnaissance();
 		roro.listerConnaissance();
 		yakuLeNoir.listerConnaissance();
